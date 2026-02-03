@@ -36,6 +36,20 @@
       line-height: 1.6;
     }
 
+    /* Profile Image */
+    .profile-pic {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+      background: #020617;
+      z-index: 100;
+    }
+
     header {
       text-align: center;
       padding: 5rem 1rem 3rem;
@@ -109,11 +123,20 @@
       header h1 {
         font-size: 2.2rem;
       }
+
+      .profile-pic {
+        width: 52px;
+        height: 52px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Profile Image -->
+  <img src="images/profile.jpg" alt="Oliver Gucor" class="profile-pic">
+
   <header>
     <h1>Hello, I’m Oliver 👋</h1>
     <p>Developer • Creator • Learning every day</p>
@@ -149,5 +172,6 @@
   <footer>
     © 2026 Oliver Gucor. Built with HTML & CSS.
   </footer>
+
 </body>
 </html>
