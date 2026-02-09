@@ -1,201 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Full Name | Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome (Social Icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background:#0b0c10;
+    color:#ffffff;
+}
+header{
+    padding:60px 10%;
+    text-align:center;
+}
+header h1{
+    font-size:40px;
+    font-weight:700;
+}
+header p{
+    margin-top:10px;
+    font-size:18px;
+    color:#bbbbbb;
+}
+.social-links a{
+    margin:10px;
+    text-decoration:none;
+    color:#00d1ff;
+    font-weight:600;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+section{
+    padding:50px 10%;
+}
+h2{
+    font-size:28px;
+    margin-bottom:20px;
+    border-bottom:2px solid #00d1ff;
+    display:inline-block;
+    padding-bottom:5px;
+}
+p{
+    line-height:1.6;
+    color:#dddddd;
+}
+ul{
+    margin-top:10px;
+}
+ul li{
+    margin-bottom:8px;
+}
 
-        body {
-            background: #0f172a;
-            color: #e5e7eb;
-        }
-
-        header {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            color: #38bdf8;
-            font-size: 1.5rem;
-        }
-
-        nav a {
-            margin-left: 1.5rem;
-            color: #e5e7eb;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero span {
-            color: #38bdf8;
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin: 1rem auto;
-            font-size: 1.1rem;
-            color: #cbd5f5;
-        }
-
-        .socials {
-            margin-top: 1.5rem;
-        }
-
-        .socials a {
-            margin: 0 0.6rem;
-            font-size: 1.6rem;
-            color: #e5e7eb;
-            transition: 0.3s;
-        }
-
-        .socials a:hover {
-            color: #38bdf8;
-            transform: scale(1.2);
-        }
-
-        .section {
-            padding: 4rem 2rem;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section h3 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #38bdf8;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill {
-            background: #020617;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project {
-            background: #020617;
-            padding: 1.5rem;
-            border-radius: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: #94a3b8;
-            background: #020617;
-        }
-    </style>
+/* Skills Cards */
+.skills-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+.skill-card{
+    background:#141821;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #1f2933;
+}
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0f172a;
+    color:#777;
+}
+</style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>YourName</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <h1>YOUR FULL NAME</h1>
+    <p>Operations & Administrative Officer | City, Province</p>
+
+    <div class="social-links">
+        <a href="https://facebook.com/YOURNAME" target="_blank">Facebook</a>
+        <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@YOURNAME" target="_blank">TikTok</a>
+        <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YOURNAME" target="_blank">GitHub</a>
+    </div>
 </header>
 
-<section class="hero" id="home">
-    <div>
-        <h2>Hi, I'm <span>Your Name</span></h2>
-        <p>
-            A passionate Web Developer who loves building clean, modern,
-            and user-friendly websites.
-        </p>
+<!-- ABOUT -->
+<section>
+    <h2>Professional Summary</h2>
+    <p>
+        Highly organized and dependable Operations & Administrative Officer with experience managing daily operations 
+        of multiple businesses including education, printing services, and property rentals. Skilled in administrative 
+        support, client coordination, marketing assistance, billing and documentation, logistics coordination, and tenant management.
+        Able to work independently in fast-paced environments while providing strong operational support to management.
+    </p>
+</section>
 
-        <div class="socials">
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+<!-- SKILLS -->
+<section>
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">Operations & Office Administration</div>
+        <div class="skill-card">Administrative & Executive Support</div>
+        <div class="skill-card">Client & Customer Relations</div>
+        <div class="skill-card">Marketing & Social Media Posting</div>
+        <div class="skill-card">Billing, Invoicing & Documentation</div>
+        <div class="skill-card">Basic Accounting Support (BIR 2307, Utilities)</div>
+        <div class="skill-card">Logistics & Delivery Coordination</div>
+        <div class="skill-card">Property & Tenant Management</div>
+        <div class="skill-card">Contract Coordination</div>
+        <div class="skill-card">Time Management & Multitasking</div>
+        <div class="skill-card">Communication & Coordination</div>
     </div>
 </section>
 
-<section class="section" id="skills">
-    <h3>My Skills</h3>
-    <div class="skills">
-        <div class="skill">HTML & CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">UI/UX Design</div>
-        <div class="skill">Git & GitHub</div>
-    </div>
+<!-- EXPERIENCE -->
+<section>
+    <h2>Professional Experience</h2>
+    <p><b>Operations & Administrative Officer</b><br>
+    Multi-Business Company (Dental School | Large Character Printing | Property Rental) | Year – Present</p>
+
+    <ul>
+        <li>Managed daily operations of three business units and supported the business owner.</li>
+        <li>Assisted in student recruitment, enrollment inquiries, tuition payments, and social media promotions.</li>
+        <li>Designed marketing materials such as tarpaulin layouts and promotional graphics.</li>
+        <li>Handled printing client sourcing, delivery receipts, invoices, and documentation.</li>
+        <li>Coordinated logistics for deliveries via pier and airport.</li>
+        <li>Prepared BIR Form 2307 and other financial documents.</li>
+        <li>Managed tenant inquiries, contracts, and rental coordination.</li>
+        <li>Conducted site viewings and explained rental terms.</li>
+        <li>Monitored utility bills and maintained transaction records.</li>
+    </ul>
 </section>
 
-<section class="section" id="projects">
-    <h3>Projects</h3>
-    <div class="projects">
-        <div class="project">
-            <h4>Portfolio Website</h4>
-            <p>A personal portfolio website built using HTML and CSS.</p>
-        </div>
-        <div class="project">
-            <h4>Landing Page</h4>
-            <p>A modern responsive landing page for a startup.</p>
-        </div>
-        <div class="project">
-            <h4>Web App</h4>
-            <p>A JavaScript-based web application.</p>
-        </div>
-    </div>
+<!-- EDUCATION -->
+<section>
+    <h2>Education</h2>
+    <p><b>Degree / Course:</b> YOUR DEGREE<br>
+       <b>School:</b> YOUR SCHOOL NAME<br>
+       <b>Year Graduated:</b> YEAR</p>
 </section>
 
-<footer id="contact">
-    <p>Contact me at: yourname@email.com</p>
-    <p>© 2026 Your Name</p>
+<!-- ADDITIONAL INFO -->
+<section>
+    <h2>Additional Information</h2>
+    <ul>
+        <li>Can work independently with minimal supervision</li>
+        <li>Willing to learn and adapt to new systems</li>
+        <li>Strong customer service and interpersonal skills</li>
+    </ul>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 YOUR FULL NAME | Personal Portfolio Website</p>
 </footer>
 
 </body>
