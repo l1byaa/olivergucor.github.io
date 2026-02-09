@@ -46,13 +46,58 @@ header{
     font-size:42px;
     font-weight:700;
 }
+
+/* RUNNING LIGHT NAME BOX */
+.neon-box{
+    position:relative;
+    display:inline-block;
+    padding:14px 30px;
+    margin-bottom:10px;
+    border-radius:16px;
+    background:#141821;
+    overflow:hidden;
+}
+
+.neon-box::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #00d1ff,
+        transparent,
+        #00d1ff
+    );
+    animation:runningLight 3s linear infinite;
+}
+
+.neon-box::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:#141821;
+    border-radius:14px;
+    z-index:1;
+}
+
+.neon-box span{
+    position:relative;
+    z-index:2;
+}
+
+@keyframes runningLight{
+    0%{transform:translateX(-100%);}
+    100%{transform:translateX(100%);}
+}
+
 .header-text p{
     margin-top:10px;
     font-size:18px;
     color:#bbbbbb;
 }
 
-/* SOCIAL LINKS WITH ICONS */
+/* SOCIAL LINKS */
 .social-links{
     margin-top:20px;
 }
@@ -78,6 +123,43 @@ header{
     transform:translateY(-3px);
 }
 
+/* UI BUTTON */
+.ui-btn{
+    margin-top:25px;
+    padding:14px 36px;
+    font-size:16px;
+    font-weight:600;
+    color:#00d1ff;
+    background:transparent;
+    border:2px solid #00d1ff;
+    border-radius:40px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:0.3s ease;
+    box-shadow:0 0 20px rgba(0,209,255,0.25);
+}
+
+.ui-btn::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg, transparent, rgba(0,209,255,0.5), transparent);
+    transform:translateX(-100%);
+    transition:0.5s;
+}
+
+.ui-btn:hover::before{
+    transform:translateX(100%);
+}
+
+.ui-btn:hover{
+    background:#00d1ff;
+    color:#000;
+    box-shadow:0 0 40px rgba(0,209,255,0.8);
+    transform:translateY(-2px);
+}
+
 /* SECTIONS */
 section{
     padding:60px 10%;
@@ -94,7 +176,7 @@ p{
     color:#dddddd;
 }
 
-/* GLASS CARD STYLE */
+/* GLASS CARD */
 .card{
     background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.1);
@@ -124,15 +206,6 @@ p{
     box-shadow:0 10px 25px rgba(0,209,255,0.2);
 }
 
-/* EXPERIENCE LIST */
-ul{
-    margin-top:15px;
-}
-ul li{
-    margin-bottom:10px;
-    line-height:1.6;
-}
-
 /* FOOTER */
 footer{
     text-align:center;
@@ -154,86 +227,49 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
     <img src="profile.png.JPG" alt="Profile Picture" class="profile-pic">
 
     <div class="header-text">
-        <h1>OLIVER GUCOR</h1>
+        <h1 class="neon-box"><span>OLIVER GUCOR</span></h1>
         <p>Operations & Administrative Officer | City, Province</p>
 
         <div class="social-links">
-            <a href="https://facebook.com/YOURNAME" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/YOURNAME" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@YOURNAME" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://linkedin.com/in/YOURNAME" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/YOURNAME" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
         </div>
+
+        <button class="ui-btn" onclick="scrollToBottom()">View My Profile</button>
     </div>
 </header>
 
-<!-- ABOUT -->
 <section>
     <div class="card">
         <h2>Professional Summary</h2>
         <p>
             Highly organized and dependable Operations & Administrative Officer with experience managing daily operations 
-            of multiple businesses including education, printing services, and property rentals. Skilled in administrative 
-            support, client coordination, marketing assistance, billing and documentation, logistics coordination, and tenant management.
+            of multiple businesses including education, printing services, and property rentals.
         </p>
     </div>
 </section>
 
-<!-- SKILLS -->
-<section>
-    <h2>Core Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-card">Operations & Office Administration</div>
-        <div class="skill-card">Administrative & Executive Support</div>
-        <div class="skill-card">Client & Customer Relations</div>
-        <div class="skill-card">Marketing & Social Media Posting</div>
-        <div class="skill-card">Billing, Invoicing & Documentation</div>
-        <div class="skill-card">Basic Accounting Support</div>
-        <div class="skill-card">Logistics & Delivery Coordination</div>
-        <div class="skill-card">Property & Tenant Management</div>
-        <div class="skill-card">Contract Coordination</div>
-        <div class="skill-card">Time Management & Multitasking</div>
-        <div class="skill-card">Communication & Coordination</div>
-    </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-    <div class="card">
-        <h2>Professional Experience</h2>
-        <p><b>Operations & Administrative Officer</b><br>
-        Multi-Business Company | Year – Present</p>
-
-        <ul>
-            <li>Managed daily operations of three business units.</li>
-            <li>Handled enrollment inquiries and marketing promotions.</li>
-            <li>Prepared invoices, delivery receipts, and BIR documents.</li>
-            <li>Coordinated logistics via pier and airport.</li>
-            <li>Managed tenant contracts and site viewings.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section>
-    <div class="card">
-        <h2>Education</h2>
-        <p><b>Degree:</b> YOUR DEGREE<br>
-           <b>School:</b> YOUR SCHOOL<br>
-           <b>Year Graduated:</b> YEAR</p>
-    </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
     <p>© 2026 OLIVER GUCOR | Personal Portfolio Website</p>
 </footer>
 
+<script>
+function scrollToBottom(){
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+</script>
+
 </body>
 </html>
+
 
