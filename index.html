@@ -8,6 +8,9 @@
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 *{
     margin:0;
@@ -49,19 +52,30 @@ header{
     color:#bbbbbb;
 }
 
-/* SOCIAL LINKS */
+/* SOCIAL LINKS WITH ICONS */
 .social-links{
-    margin-top:15px;
+    margin-top:20px;
 }
 .social-links a{
-    margin-right:15px;
-    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    margin-right:12px;
+    border-radius:50%;
+    background:#141821;
     color:#00d1ff;
-    font-weight:600;
-    transition:0.3s;
+    font-size:18px;
+    text-decoration:none;
+    border:1px solid #1f2933;
+    transition:0.3s ease;
 }
 .social-links a:hover{
-    color:#ffffff;
+    background:#00d1ff;
+    color:#000;
+    box-shadow:0 0 20px rgba(0,209,255,0.6);
+    transform:translateY(-3px);
 }
 
 /* SECTIONS */
@@ -149,11 +163,11 @@ footer{
         <p>Operations & Administrative Officer | City, Province</p>
 
         <div class="social-links">
-            <a href="https://facebook.com/YOURNAME" target="_blank">Facebook</a>
-            <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a>
-            <a href="https://tiktok.com/@YOURNAME" target="_blank">TikTok</a>
-            <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
-            <a href="https://github.com/YOURNAME" target="_blank">GitHub</a>
+            <a href="https://facebook.com/YOURNAME" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/YOURNAME" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@YOURNAME" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://linkedin.com/in/YOURNAME" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/YOURNAME" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </header>
@@ -217,8 +231,9 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 YOUR FULL NAME | Personal Portfolio Website</p>
+    <p>© 2026 OLIVER GUCOR | Personal Portfolio Website</p>
 </footer>
 
 </body>
 </html>
+
