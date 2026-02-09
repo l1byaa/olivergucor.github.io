@@ -13,70 +13,127 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Inter', sans-serif;
+    font-family:'Inter', sans-serif;
 }
 body{
-    background:#0b0c10;
+    background:linear-gradient(135deg, #0b0c10, #0f172a);
     color:#ffffff;
 }
+
+/* HEADER */
 header{
     padding:60px 10%;
-    text-align:center;
+    display:flex;
+    align-items:center;
+    gap:40px;
 }
-header h1{
-    font-size:40px;
+
+/* PROFILE IMAGE */
+.profile-pic{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid #00d1ff;
+    object-fit:cover;
+    box-shadow:0 0 30px rgba(0,209,255,0.4);
+}
+
+/* HEADER TEXT */
+.header-text h1{
+    font-size:42px;
     font-weight:700;
 }
-header p{
+.header-text p{
     margin-top:10px;
     font-size:18px;
     color:#bbbbbb;
 }
+
+/* SOCIAL LINKS */
+.social-links{
+    margin-top:15px;
+}
 .social-links a{
-    margin:10px;
+    margin-right:15px;
     text-decoration:none;
     color:#00d1ff;
     font-weight:600;
+    transition:0.3s;
+}
+.social-links a:hover{
+    color:#ffffff;
 }
 
+/* SECTIONS */
 section{
-    padding:50px 10%;
+    padding:60px 10%;
 }
 h2{
     font-size:28px;
-    margin-bottom:20px;
+    margin-bottom:25px;
     border-bottom:2px solid #00d1ff;
     display:inline-block;
-    padding-bottom:5px;
+    padding-bottom:6px;
 }
 p{
-    line-height:1.6;
+    line-height:1.7;
     color:#dddddd;
 }
-ul{
-    margin-top:10px;
-}
-ul li{
-    margin-bottom:8px;
+
+/* GLASS CARD STYLE */
+.card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:16px;
+    padding:30px;
+    backdrop-filter: blur(12px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* Skills Cards */
+/* SKILLS */
 .skills-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap:20px;
+    margin-top:20px;
 }
 .skill-card{
     background:#141821;
     padding:20px;
-    border-radius:12px;
+    border-radius:14px;
     border:1px solid #1f2933;
+    transition:0.3s;
 }
+.skill-card:hover{
+    transform:translateY(-6px);
+    border-color:#00d1ff;
+    box-shadow:0 10px 25px rgba(0,209,255,0.2);
+}
+
+/* EXPERIENCE LIST */
+ul{
+    margin-top:15px;
+}
+ul li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* FOOTER */
 footer{
     text-align:center;
     padding:30px;
     background:#0f172a;
     color:#777;
+    margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
 }
 </style>
 </head>
@@ -85,27 +142,32 @@ footer{
 
 <!-- HEADER -->
 <header>
-    <h1>YOUR FULL NAME</h1>
-    <p>Operations & Administrative Officer | City, Province</p>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
 
-    <div class="social-links">
-        <a href="https://facebook.com/YOURNAME" target="_blank">Facebook</a>
-        <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a>
-        <a href="https://tiktok.com/@YOURNAME" target="_blank">TikTok</a>
-        <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
-        <a href="https://github.com/YOURNAME" target="_blank">GitHub</a>
+    <div class="header-text">
+        <h1>YOUR FULL NAME</h1>
+        <p>Operations & Administrative Officer | City, Province</p>
+
+        <div class="social-links">
+            <a href="https://facebook.com/YOURNAME" target="_blank">Facebook</a>
+            <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a>
+            <a href="https://tiktok.com/@YOURNAME" target="_blank">TikTok</a>
+            <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
+            <a href="https://github.com/YOURNAME" target="_blank">GitHub</a>
+        </div>
     </div>
 </header>
 
 <!-- ABOUT -->
 <section>
-    <h2>Professional Summary</h2>
-    <p>
-        Highly organized and dependable Operations & Administrative Officer with experience managing daily operations 
-        of multiple businesses including education, printing services, and property rentals. Skilled in administrative 
-        support, client coordination, marketing assistance, billing and documentation, logistics coordination, and tenant management.
-        Able to work independently in fast-paced environments while providing strong operational support to management.
-    </p>
+    <div class="card">
+        <h2>Professional Summary</h2>
+        <p>
+            Highly organized and dependable Operations & Administrative Officer with experience managing daily operations 
+            of multiple businesses including education, printing services, and property rentals. Skilled in administrative 
+            support, client coordination, marketing assistance, billing and documentation, logistics coordination, and tenant management.
+        </p>
+    </div>
 </section>
 
 <!-- SKILLS -->
@@ -117,7 +179,7 @@ footer{
         <div class="skill-card">Client & Customer Relations</div>
         <div class="skill-card">Marketing & Social Media Posting</div>
         <div class="skill-card">Billing, Invoicing & Documentation</div>
-        <div class="skill-card">Basic Accounting Support (BIR 2307, Utilities)</div>
+        <div class="skill-card">Basic Accounting Support</div>
         <div class="skill-card">Logistics & Delivery Coordination</div>
         <div class="skill-card">Property & Tenant Management</div>
         <div class="skill-card">Contract Coordination</div>
@@ -128,39 +190,29 @@ footer{
 
 <!-- EXPERIENCE -->
 <section>
-    <h2>Professional Experience</h2>
-    <p><b>Operations & Administrative Officer</b><br>
-    Multi-Business Company (Dental School | Large Character Printing | Property Rental) | Year – Present</p>
+    <div class="card">
+        <h2>Professional Experience</h2>
+        <p><b>Operations & Administrative Officer</b><br>
+        Multi-Business Company | Year – Present</p>
 
-    <ul>
-        <li>Managed daily operations of three business units and supported the business owner.</li>
-        <li>Assisted in student recruitment, enrollment inquiries, tuition payments, and social media promotions.</li>
-        <li>Designed marketing materials such as tarpaulin layouts and promotional graphics.</li>
-        <li>Handled printing client sourcing, delivery receipts, invoices, and documentation.</li>
-        <li>Coordinated logistics for deliveries via pier and airport.</li>
-        <li>Prepared BIR Form 2307 and other financial documents.</li>
-        <li>Managed tenant inquiries, contracts, and rental coordination.</li>
-        <li>Conducted site viewings and explained rental terms.</li>
-        <li>Monitored utility bills and maintained transaction records.</li>
-    </ul>
+        <ul>
+            <li>Managed daily operations of three business units.</li>
+            <li>Handled enrollment inquiries and marketing promotions.</li>
+            <li>Prepared invoices, delivery receipts, and BIR documents.</li>
+            <li>Coordinated logistics via pier and airport.</li>
+            <li>Managed tenant contracts and site viewings.</li>
+        </ul>
+    </div>
 </section>
 
 <!-- EDUCATION -->
 <section>
-    <h2>Education</h2>
-    <p><b>Degree / Course:</b> YOUR DEGREE<br>
-       <b>School:</b> YOUR SCHOOL NAME<br>
-       <b>Year Graduated:</b> YEAR</p>
-</section>
-
-<!-- ADDITIONAL INFO -->
-<section>
-    <h2>Additional Information</h2>
-    <ul>
-        <li>Can work independently with minimal supervision</li>
-        <li>Willing to learn and adapt to new systems</li>
-        <li>Strong customer service and interpersonal skills</li>
-    </ul>
+    <div class="card">
+        <h2>Education</h2>
+        <p><b>Degree:</b> YOUR DEGREE<br>
+           <b>School:</b> YOUR SCHOOL<br>
+           <b>Year Graduated:</b> YEAR</p>
+    </div>
 </section>
 
 <!-- FOOTER -->
